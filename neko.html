@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Cats Paradise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ffcce6;
+            --secondary: #e6f9ff;
+            --accent: #ff9966;
+            --text: #333333;
+            --light: #fff9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary);
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-family: 'Comic Neue', cursive;
+            font-size: 2rem;
+            color: var(--text);
+            text-decoration: none;
+        }
+        
+        .nav-links a {
+            margin-left: 2rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .hero {
+            position: relative;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--secondary);
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-family: 'Comic Neue', cursive;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0.3;
+        }
+        
+        .section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            font-family: 'Comic Neue', cursive;
+            color: var(--accent);
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .feature-content {
+            padding: 1.5rem;
+        }
+        
+        .feature-content h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+        
+        footer {
+            background-color: var(--primary);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            margin: 0 1rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Cute Cats</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/24cf1769-f6a8-4648-80f1-0c0c5eb15d69.png" alt="A group of adorable kittens playing together in a sunny living room with fuzzy blankets and cat toys scattered around" class="hero-image">
+        <div class="hero-content">
+            <h1>Welcome to Cute Cats Paradise</h1>
+            <p>Discover the most adorable feline friends around the world. Learn about their personalities, habits, and why they make perfect companions.</p>
+            <a href="#features" class="btn">Meet Our Cats</a>
+        </div>
+    </section>
+    
+    <section id="features" class="section">
+        <h2 class="section-title">Why Cats Are Amazing</h2>
+        <div class="features">
+            <div class="feature-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f416f66e-c87f-4d34-b237-4dbbb1590ec0.png" alt="Close-up of a fluffy grey Persian cat with big round eyes looking curiously at the camera" class="feature-image">
+                <div class="feature-content">
+                    <h3>Perfect Companions</h3>
+                    <p>Cats provide wonderful companionship and unconditional love. Their independent nature makes them perfect for any lifestyle.</p>
+                    <button class="btn" onclick="showAdoptionAlert()">Adopt Me</button>
+                </div>
+            </div>
+            <div class="feature-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3cd435e2-dc14-4354-a866-1876d6aae7f5.png" alt="Orange tabby kitten stretched out on a sofa with its belly exposed, looking extremely relaxed and happy" class="feature-image">
+                <div class="feature-content">
+                    <h3>Therapeutic Benefits</h3>
+                    <p>Petting a cat can lower your stress levels and blood pressure. Their purring has even been shown to have healing properties.</p>
+                    <button class="btn" onclick="showAdoptionAlert()">Adopt Me</button>
+                </div>
+            </div>
+            <div class="feature-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f585c2fa-5e7e-4fba-82f6-9e92be2cbbb6.png" alt="Playful black and white tuxedo cat chasing a red yarn ball with intense focus and excitement" class="feature-image">
+                <div class="feature-content">
+                    <h3>Low Maintenance</h3>
+                    <p>While they enjoy attention, cats are independent enough to take care of themselves when you're busy or away from home.</p>
+                    <button class="btn" onclick="showAdoptionAlert()">Adopt Me</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="gallery" class="section" style="background-color: var(--secondary);">
+        <h2 class="section-title">Our Cutest Felines</h2>
+        <div class="features">
+            <div class="feature-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d4ae68f9-ad4f-411e-9bd6-79e1931283fb.png" alt="Siamese cat with blue eyes sitting elegantly on a windowsill with sunlight streaming through" class="feature-image">
+                <div class="feature-content">
+                    <h3>Sophie the Siamese</h3>
+                    <p>This elegant lady loves sunbathing and will serenade you with her beautiful voice when she wants attention.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e754e8dd-bc69-47ce-8667-f31d81d7f83b.png" alt="Fluffy Maine Coon cat sitting proudly on a cat tree, showing off its majestic mane" class="feature-image">
+                <div class="feature-content">
+                    <h3>Max the Maine Coon</h3>
+                    <p>A gentle giant who thinks he's still a kitten. Enjoys water more than any cat we've ever met!</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/cbe4bb5b-7389-4069-8950-82c9aef8bbe9.png" alt="Scottish Fold kitten with folded ears looking up curiously with oversized green eyes" class="feature-image">
+                <div class="feature-content">
+                    <h3>Oliver the Scottish Fold</h3>
+                    <p>Small in size but huge in personality. His folded ears make him look like he's permanently surprised by the world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#features">Features</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+        <p class="copyright">© 2023 Cute Cats Paradise. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function showAdoptionAlert() {
+            alert("Meow! Thank you for considering adoption! Our cat specialist will contact you soon to arrange a meeting with your potential new feline friend.");
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
