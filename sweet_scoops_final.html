@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Scoops Ice Cream</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f0e68c; /* Changed background color */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .content {
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .grid-item {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .menu-image {
+            width: 100px;
+            height: 100px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ffcc00;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e6b800;
+        }
+
+        .cart-controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        #cartList li {
+            cursor: pointer;
+            padding: 12px;
+            background: #fff;
+            margin: 6px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #cartList li:before {
+            content: "🍦";
+            margin-right: 8px;
+        }
+
+        #checkoutButton {
+            margin-top: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-family: 'Pacifico', cursive; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">Sweet Scoops! 🍦</h1>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="content">
+        <h2>Our Delicious Flavors</h2>
+        <div class="grid-container">
+            <div class="grid-item"><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS7RF7OnqT0MtK9OcdKo8LRoZLe26As9p9vv7v4BvftsIEt2HsCy5J3rkYcDUP2Utg9sqanJ7--NcQ0tmUWK-qwh5Z6mUyhXniD-mtenP4E" class="menu-image"><h3>Coffee</h3><p>₹99</p></div>
+            <div class="grid-item"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRvhDcKosWmPHNSsd9UOfB4xrhOfJBUpTZDntXEcgW0AiHs8pLn4hig6LT7zraWFrD2WPIokCWbmcdG2-PBxh0zLbpvQvCHzDWDZ8Ll-cjA" class="menu-image"><h3>Cookies and Cream</h3><p>₹129</p></div>
+            <div class="grid-item"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7e44a0b9-0222-4b6f-9580-d56412e6b1da.png" class="menu-image"><h3>Vanilla</h3><p>₹89</p></div>
+            <div class="grid-item"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/594191de-b91e-4df2-bfbf-b0e042befe0a.png" class="menu-image"><h3>Chocolate</h3><p>₹109</p></div>
+            <div class="grid-item"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8ef6f34a-f058-4e09-b380-34ec0d0fe319.png" class="menu-image"><h3>Strawberry</h3><p>₹99</p></div>
+            <div class="grid-item"><img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f5ae2e2e-68a2-43a2-bbb4-37ec028cf74d.png" class="menu-image"><h3>Mint</h3><p>₹89</p></div>
+        </div>
+        <h2>Shopping Cart</h2>
+        <div class="cart-controls">
+            <select id="flavorSelect">
+                <option value="">Select an ice cream flavor</option>
+                <option value="Vanilla">Vanilla</option>
+                <option value="Chocolate">Chocolate</option>
+                <option value="Strawberry">Strawberry</option>
+                <option value="Mint">Mint</option>
+                <option value="Coffee">Coffee</option>
+                <option value="Cookies and Cream">Cookies and Cream</option>
+            </select>
+            <input type="number" id="quantity" min="1" value="1" style="width: 60px;">
+            <button id="addCartButton">Add to Cart</button>
+        </div>
+        <ul id="cartList"></ul>
+        <button id="checkoutButton">Proceed to Checkout</button>
+
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer style="text-align: center; padding: 20px; margin-top: 40px; background: rgba(255, 255, 255, 0.8);">
+        <p>© 2023 Sweet Scoops Ice Cream</p>
+        <div><span style="margin: 0 10px;">📱 123-456-7890</span><span style="margin: 0 10px;">📍 123 Ice Cream Street</span></div>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            if (!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            alert('Form submitted successfully!');
+            this.reset();
+        });
+
+        document.getElementById('addCartButton').addEventListener('click', function () {
+            const flavor = document.getElementById('flavorSelect').value;
+            const quantity = document.getElementById('quantity').value;
+            if (flavor === '' || quantity <= 0) {
+                alert('Please select a valid flavor and quantity.');
+                return;
+            }
+            const li = document.createElement('li');
+            li.textContent = `${flavor} ×${quantity}`;
+            li.addEventListener('click', function () {
+                this.remove();
+            });
+            document.getElementById('cartList').appendChild(li);
+            document.getElementById('flavorSelect').value = '';
+            document.getElementById('quantity').value = 1;
+        });
+
+        document.getElementById('checkoutButton').addEventListener('click', function () {
+            const items = document.querySelectorAll('#cartList li');
+            if (items.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            let summary = "You're buying:\n";
+            items.forEach(li => { summary += "- " + li.textContent + "\n"; });
+            alert(summary + "\nThanks for shopping at Sweet Scoops!");
+        });
+    </script>
+</body>
+</html>
