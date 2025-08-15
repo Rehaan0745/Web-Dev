@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehaan's Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f0f0f;
+            color: white;
+        }
+        header {
+            height: 100vh;
+            background: url('coding-cat.png') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            position: relative;
+        }
+        header::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+        }
+        header h1, header p {
+            position: relative;
+            z-index: 1;
+        }
+        header h1 {
+            font-size: 3rem;
+            animation: fadeInDown 2s ease-out;
+        }
+        header p {
+            font-size: 1.2rem;
+            animation: fadeInUp 2s ease-out;
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        nav {
+            background: #1a1a1a;
+            padding: 10px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ff9800;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project {
+            background: #1f1f1f;
+            padding: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .project:hover {
+            transform: scale(1.05);
+        }
+        .project a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ff9800;
+        }
+        footer {
+            background: #111;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header>
+    <h1>Hey, I'm Rehaan 🐱</h1>
+    <p>Web Developer | Creative Coder | Innovator</p>
+</header>
+
+<section id="about">
+    <h2>About Me</h2>
+    <p>Hey everyone! I’m super excited to share what I’ve been working on during my internship at ApexPlanet Software Pvt. Ltd.</p>
+    <p>For Task 4, I got the chance to design and build a personal portfolio website using HTML, CSS, and JavaScript. My goal was simple: showcase my skills and projects in a clean, modern, and fully responsive way.</p>
+    <ul>
+        <li>Multi-page layout: About, Projects, and Contact sections</li>
+        <li>Responsive design that looks great on desktop and mobile</li>
+        <li>Smooth navigation and interactive elements to highlight my work</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <h3>OpenMeteo Weather App</h3>
+            <a href="https://github.com/Rehaan0745/Web-Dev/blob/main/OpenMeteoWeatherApp_NatureTheme.html" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Sweet Scoops</h3>
+            <a href="https://github.com/Rehaan0745/Web-Dev/blob/main/sweet_scoops_final.html" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Neko Project</h3>
+            <a href="https://github.com/Rehaan0745/Web-Dev/blob/main/neko.html" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required><br><br>
+        <input type="email" placeholder="Your Email" required><br><br>
+        <textarea placeholder="Your Message" required></textarea><br><br>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Rehaan. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
